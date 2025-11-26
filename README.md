@@ -150,23 +150,33 @@ Recommended default sync strategy: **Sitemap (if present) → Conditional GET �
 ### From PyPI (pip)
 ```bash
 pip install ragcrawl
+```
 
 From PyPI (uv)
-
+```bash
 uv pip install ragcrawl
-# or
+```
+or
+
+```bash
 uv add ragcrawl
+```
 
 Optional Dependencies (Extras)
-
+```bash
 # DynamoDB backend (PynamoDB + AWS deps)
 pip install "ragcrawl[dynamodb]"
+````
 
+```bash
 # Browser/JS rendering support
 pip install "ragcrawl[browser]"
+```
 
+```bash
 # Everything
 pip install "ragcrawl[all]"
+```
 
 Note: DuckDB is the default backend. Depending on packaging choices, DuckDB may be included in base dependencies to guarantee "works by default".
 
@@ -177,6 +187,7 @@ Note: DuckDB is the default backend. Depending on packaging choices, DuckDB may 
 ragcrawl provides a full-featured command-line interface for crawling and managing sites.
 
 ### Available Commands
+
 
 ```
 ragcrawl --help          # Show all commands
@@ -313,6 +324,7 @@ ragcrawl config reset --yes  # Skip confirmation
 
 ## Quickstart (DuckDB Default)
 
+```python
 from ragcrawl import CrawlJob, CrawlerConfig
 
 config = CrawlerConfig(
@@ -344,12 +356,13 @@ job = CrawlJob(config=config)
 result = job.run()
 
 print(result.stats)
-
+```
 
 ⸻
 
 DynamoDB Backend Example (PynamoDB)
 
+```python
 from ragcrawl import CrawlJob, CrawlerConfig
 
 config = CrawlerConfig(
@@ -370,12 +383,13 @@ config = CrawlerConfig(
 
 job = CrawlJob(config=config)
 job.run()
-
+```
 
 ⸻
 
 Sync / Update Example
 
+```python
 from ragcrawl import SyncJob, SyncConfig
 
 sync = SyncJob(
@@ -392,88 +406,141 @@ sync = SyncJob(
 )
 sync_result = sync.run()
 print(sync_result.changed_pages, sync_result.deleted_pages)
-
-
-⸻
-
-Output Format Options
-
-1) Single-Page Mode
-	•	Writes one Markdown file (e.g., out/site.md)
-	•	Includes TOC and per-page anchors for navigation
-	•	Useful for small-to-medium documentation bases or offline review
-
-2) Multi-Page Mode (Folder Structure Preserved)
-	•	Writes one Markdown file per URL
-	•	Preserves original folder structure under root_dir
-	•	Rewrites internal links to local markdown paths
-	•	Optionally generates:
-	•	index/TOC pages
-	•	breadcrumbs
-	•	previous/next links
-	•	On deletions, configurable:
-	•	tombstone page
-	•	redirect stub
-	•	remove file
+```
 
 ⸻
 
-Observability & Debuggability
-	•	Structured logs (JSON-friendly)
-	•	Per-run metrics:
-	•	discovered / fetched / succeeded / failed / skipped / changed
-	•	per-domain latency, retry counts, error categories
-	•	Run artifacts:
-	•	crawl diagnostics per page (status codes, extraction size, timings)
-	•	Testability requirements:
-	•	URL normalization unit tests
-	•	extraction snapshot tests
-	•	replayable HTTP fixtures
+### Output Format Options
+
+#### Single-Page Mode
+- Writes one Markdown file (e.g., out/site.md)
+- Includes TOC and per-page anchors for navigation
+- Useful for small-to-medium documentation bases or offline review
+
+#### Multi-Page Mode (Folder Structure Preserved)
+- Writes one Markdown file per URL
+- Preserves original folder structure under root_dir
+- Rewrites internal links to local markdown paths
+- Optionally generates:
+    - index/TOC pages
+    - breadcrumbs
+    - previous/next links
+- On deletions, configurable:
+    - tombstone page
+    - redirect stub
+    - remove file
 
 ⸻
 
-Extensibility (Plugin Interfaces)
+### Observability & Debuggability
+- Structured logs (JSON-friendly)
+- Per-run metrics:
+    - discovered / fetched / succeeded / failed / skipped / changed
+    - per-domain latency, retry counts, error categories
+- Run artifacts:
+    - crawl diagnostics per page (status codes, extraction size, timings)
+- Testability requirements:
+    - URL normalization unit tests
+    - extraction snapshot tests
+    - replayable HTTP fixtures
+
+⸻
+
+### Extensibility (Plugin Interfaces)
 
 The library is designed with extension points:
-	•	LinkFilter (custom allow/deny logic)
-	•	Extractor (markdown/custom parsing)
-	•	ChangeDetector (custom diff logic)
-	•	StorageBackend (add Postgres/S3/etc.)
-	•	Hooks:
-	•	on_page(document)
-	•	on_error(error)
-	•	on_change_detected(change_event)
+- LinkFilter (custom allow/deny logic)
+- Extractor (markdown/custom parsing)
+- ChangeDetector (custom diff logic)
+- StorageBackend (add Postgres/S3/etc.)
+- Hooks:
+    - on_page(document)
+    - on_error(error)
+    - on_change_detected(change_event)
 
 ⸻
 
-Project Scope (v1 vs v2)
+## Project Scope (v1 vs v2)
 
-v1 (This Package)
-	•	Library-first deliverable with optional CLI
-	•	Single-machine execution with strong concurrency controls
-	•	DuckDB default + Optional DynamoDB persistence
-	•	Incremental sync + change events
-	•	KB/RAG output (Docs + chunks + exporters)
+### v1 (This Package)
+- Library-first deliverable with a production-grade CLI.
+- Single-machine execution with strong concurrency/backpressure controls.
+- Pluggable storage:
+  - DuckDB as the default centralized store (default path: `~/.ragcrawl/ragcrawl.duckdb`)
+  - Optional DynamoDB backend via PynamoDB (explicitly enabled).
+- Crawl features:
+  - recursive crawling from seed URLs with include/exclude patterns, domain/path boundaries, URL normalization, and dedupe
+  - robots/user-agent support, rate limiting, retries/backoff, redirect/canonical handling
+  - HTTP / browser / hybrid fetch modes
+- LLM/RAG outputs:
+  - clean Markdown extraction + rich metadata + stable IDs + versioning
+  - chunking (heading-aware + token/size) with chunk metadata
+  - exporters (JSON/JSONL) and change events (changed/deleted/tombstones)
+- Sync & change detection:
+  - conditional revalidation (ETag/Last-Modified + 304)
+  - optional sitemap-driven prioritization
+  - content-hash diff fallback with noise reduction
+- Markdown publishing:
+  - single-page output with TOC/anchors
+  - multi-page output preserving folder structure + internal link rewriting + optional index/breadcrumb/prev-next
+- Config management:
+  - `ragcrawl config` command; store settings under `~/.ragcrawl/`
+  - optional Textual-based interactive TUI for config editing
+- Operability:
+  - structured logs, crawl/run summaries, and basic metrics counters
+  - deterministic test fixtures (URL normalization + extraction snapshots)
 
-Future (v2)
-	•	Distributed crawling / worker fleet
-	•	Event-driven sync (webhooks from CMS)
-	•	Native embedding & vector DB connectors
+### Near-term roadmap (v1.x)
+- Full pause/resume: durable frontier persistence and resumable runs.
+- Crawl policies: per-site profiles, allow/deny rulesets, and template configs.
+- Content extraction improvements:
+  - stronger boilerplate removal; code/doc tables preservation; improved canonical selection
+  - optional PDF discovery + extraction pipeline (links first; content in later release)
+- Storage & data management:
+  - optional S3 content offload for large markdown with pointers in DuckDB/DynamoDB
+  - pruning/retention policies for versions and tombstones
+- CLI upgrades:
+  - richer `ragcrawl list` / `sites` / `runs` filtering + JSON output for scripting
+  - `ragcrawl doctor` diagnostics (deps, browser, permissions, network)
+- LLM/Kb integrations (still optional, not coupled):
+  - “export adapters” for common vector DB / embedding pipelines (LangChain/LlamaIndex connectors)
+  - deterministic document IDs for idempotent re-indexing
+
+### v2 (Scale & Automation)
+- Distributed crawling / worker fleet:
+  - queue-based frontier, worker autoscaling, per-domain isolation, global politeness enforcement
+- Event-driven sync:
+  - webhook ingest (CMS publish events), or scheduled sync service with per-site SLA
+- Multi-tenant / team use:
+  - shared metadata store, authn/authz, quotas, and audit logs
+- Enterprise operability:
+  - OpenTelemetry tracing/metrics, dashboards, and crawl health SLOs
+  - run replay/debug tooling and content diff UI
+- Advanced extraction:
+  - structured extraction schemas, entity extraction, and “layout-aware” parsing for docs
+- Native embedding & vector DB connectors (optional modules):
+  - pluggable embedding providers, batching, backfills, and incremental updates
 
 ⸻
 
-License
+## License
 
-TBD
+RAGcrawl is licensed under the **Apache License 2.0**. See `LICENSE` for details.
+
+### Third-party licenses & required attributions
+
+RAGcrawl depends on third-party open-source components. You must comply with their license terms when using or redistributing RAGcrawl.
+
+In particular, RAGcrawl uses **Crawl4AI**, which is licensed under **Apache 2.0** and includes an **attribution requirement**. When you use, distribute, or ship derivative works that include/are built on Crawl4AI, you must clearly attribute Crawl4AI in public-facing materials (e.g., README, docs, or product attribution page).
 
 ⸻
 
-Contributing / Development
-	•	Uses pyproject.toml for builds (wheel + sdist)
-	•	CI expectations:
-	•	lint + typecheck + unit tests
-	•	build verification
-	•	Release:
-	•	SemVer (0.x during rapid iteration)
-	•	publish to PyPI on version tags
-	•	maintain CHANGELOG.md
+## Contributing / Development
+- Uses pyproject.toml for builds (wheel + sdist)
+- CI expectations:
+    - lint + typecheck + unit tests
+    - build verification
+- Release:
+    - SemVer (0.x during rapid iteration)
+    - publish to PyPI on version tags
+    - maintain CHANGELOG.md
