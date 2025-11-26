@@ -1,0 +1,134 @@
+site_name: ragcrawl
+site_description: Recursive website crawler producing LLM-ready knowledge base artifacts
+site_url: https://datalync.github.io/ragcrawl
+repo_url: https://github.com/datalync/ragcrawl
+repo_name: datalync/ragcrawl
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            docstring_style: google
+            merge_init_into_class: true
+  - gen-files:
+      scripts:
+        - docs/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - getting-started/index.md
+    - Installation: getting-started/installation.md
+    - Quickstart: getting-started/quickstart.md
+    - Configuration: getting-started/configuration.md
+  - Guides:
+    - guides/index.md
+    - Crawling: guides/crawling.md
+    - URL Filtering: guides/filtering.md
+    - Politeness: guides/politeness.md
+    - Incremental Sync: guides/sync.md
+    - Chunking for RAG: guides/chunking.md
+    - Output Publishing: guides/output-publishing.md
+  - Storage:
+    - storage/index.md
+    - DuckDB: storage/duckdb.md
+    - DynamoDB: storage/dynamodb.md
+  - API Reference:
+    - api/index.md
+    - Configuration: api/config.md
+    - Jobs: api/jobs.md
+    - Models: api/models.md
+    - Storage: api/storage.md
+    - Filters: api/filters.md
+    - Extractors: api/extractors.md
+    - Chunkers: api/chunkers.md
+    - Exporters: api/exporters.md
+    - Publishers: api/publishers.md
+    - Hooks: api/hooks.md
+  - Advanced:
+    - advanced/index.md
+    - Custom Filters: advanced/custom-filters.md
+    - Custom Extractors: advanced/custom-extractors.md
+    - Custom Storage: advanced/custom-storage.md
+    - Browser Rendering: advanced/browser-rendering.md
+    - Performance: advanced/performance.md
+  - CLI:
+    - cli/index.md
+    - crawl: cli/crawl.md
+    - sync: cli/sync.md
+  - Examples:
+    - examples/index.md
+    - Basic Crawl: examples/basic-crawl.md
+    - Docs Site: examples/docs-site.md
+    - Incremental Sync: examples/incremental-sync.md
+    - RAG Pipeline: examples/rag-pipeline.md
+    - Multi-Site: examples/multi-site.md
+  - Development:
+    - development/index.md
+    - Contributing: development/contributing.md
+    - Architecture: development/architecture.md
+    - Testing: development/testing.md
+    - Changelog: development/changelog.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/datalync/ragcrawl
