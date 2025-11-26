@@ -1,327 +1,327 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://datalync.github.io/ragcrawl/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/api/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/api/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/configuration/crawler/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/configuration/crawler/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/configuration/output/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/configuration/output/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/configuration/storage/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/configuration/storage/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/getting-started/installation/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/getting-started/installation/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/getting-started/quickstart/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/getting-started/quickstart/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/SUMMARY/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/SUMMARY/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/chunking/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/chunking/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/chunking/chunker/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/chunking/chunker/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/chunking/heading_chunker/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/chunking/heading_chunker/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/chunking/token_chunker/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/chunking/token_chunker/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/cli/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/cli/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/cli/config_tui/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/cli/config_tui/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/cli/main/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/cli/main/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/config/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/config/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/config/crawler_config/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/config/crawler_config/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/config/output_config/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/config/output_config/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/config/storage_config/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/config/storage_config/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/config/sync_config/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/config/sync_config/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/config/user_config/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/config/user_config/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/core/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/core/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/core/crawl_job/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/core/crawl_job/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/core/frontier/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/core/frontier/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/core/scheduler/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/core/scheduler/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/core/sync_job/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/core/sync_job/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/export/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/export/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/export/events/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/export/events/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/export/exporter/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/export/exporter/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/export/json_exporter/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/export/json_exporter/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/extraction/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/extraction/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/extraction/extractor/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/extraction/extractor/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/extraction/link_extractor/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/extraction/link_extractor/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/extraction/metadata/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/extraction/metadata/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/fetcher/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/fetcher/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/fetcher/base/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/fetcher/base/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/fetcher/crawl4ai_fetcher/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/fetcher/crawl4ai_fetcher/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/fetcher/revalidation/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/fetcher/revalidation/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/fetcher/robots/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/fetcher/robots/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/filters/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/filters/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/filters/link_filter/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/filters/link_filter/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/filters/patterns/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/filters/patterns/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/filters/quality_gates/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/filters/quality_gates/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/filters/url_normalizer/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/filters/url_normalizer/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/hooks/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/hooks/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/hooks/callbacks/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/hooks/callbacks/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/models/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/models/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/models/chunk/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/models/chunk/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/models/crawl_run/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/models/crawl_run/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/models/document/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/models/document/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/models/frontier_item/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/models/frontier_item/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/models/page/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/models/page/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/models/page_version/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/models/page_version/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/models/site/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/models/site/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/output/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/output/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/output/link_rewriter/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/output/link_rewriter/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/output/multi_page/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/output/multi_page/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/output/navigation/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/output/navigation/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/output/publisher/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/output/publisher/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/output/single_page/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/output/single_page/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/storage/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/storage/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/storage/backend/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/storage/backend/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/storage/duckdb/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/storage/duckdb/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/storage/duckdb/backend/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/storage/duckdb/backend/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/storage/duckdb/schema/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/storage/duckdb/schema/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/storage/dynamodb/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/storage/dynamodb/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/storage/dynamodb/backend/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/storage/dynamodb/backend/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/storage/dynamodb/models/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/storage/dynamodb/models/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/sync/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/sync/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/sync/change_detector/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/sync/change_detector/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/sync/sitemap_parser/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/sync/sitemap_parser/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/sync/strategies/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/sync/strategies/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/utils/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/utils/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/utils/hashing/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/utils/hashing/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/utils/logging/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/utils/logging/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/reference/ragcrawl/utils/metrics/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/reference/ragcrawl/utils/metrics/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/user-guide/chunking/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/user-guide/chunking/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/user-guide/crawling/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/user-guide/crawling/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/user-guide/exporting/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/user-guide/exporting/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://datalync.github.io/ragcrawl/user-guide/syncing/</loc>
+         <loc>https://vamshirapolu.github.io/ragcrawl/user-guide/syncing/</loc>
          <lastmod>2025-11-26</lastmod>
     </url>
 </urlset>
