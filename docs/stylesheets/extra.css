@@ -1,0 +1,109 @@
+/* Custom styles for ragcrawl documentation */
+
+:root {
+  --md-primary-fg-color: #7c4dff;
+  --md-primary-fg-color--light: #b47cff;
+  --md-primary-fg-color--dark: #651fff;
+  --md-accent-fg-color: #7c4dff;
+}
+
+/* Hero section styling */
+.md-typeset h1 {
+  font-weight: 700;
+}
+
+/* Code block improvements */
+.md-typeset code {
+  font-size: 0.85em;
+}
+
+.md-typeset pre > code {
+  font-size: 0.85em;
+}
+
+/* Better table styling */
+.md-typeset table:not([class]) {
+  font-size: 0.9em;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+/* Admonition improvements */
+.md-typeset .admonition {
+  font-size: 0.95em;
+}
+
+/* Navigation improvements */
+.md-nav__link {
+  font-size: 0.85rem;
+}
+
+/* Sticky header shadow */
+.md-header {
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styling */
+.md-footer {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+/* API reference styling */
+.doc-heading {
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.doc-object {
+  margin-bottom: 2rem;
+}
+
+/* Better source code link */
+.md-typeset a.md-source {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Homepage feature cards */
+.feature-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: var(--md-code-bg-color);
+  margin-bottom: 1rem;
+}
+
+/* Improve TOC visibility */
+.md-sidebar--secondary .md-nav__link--active {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+/* Tab styling */
+.md-typeset .tabbed-labels > label {
+  font-weight: 500;
+}
+
+/* Announcement bar */
+.md-banner {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Search improvements */
+.md-search__input {
+  border-radius: 0.5rem;
+}
+
+/* Mobile improvements */
+@media screen and (max-width: 76.1875em) {
+  .md-nav__link {
+    font-size: 0.9rem;
+  }
+}
