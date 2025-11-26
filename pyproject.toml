@@ -4,13 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ragcrawl"
-version = "0.1.0"
+version = "0.0.1"
 description = "Recursive website crawler producing LLM-ready knowledge base artifacts with Crawl4AI"
 readme = "README.md"
-license = "MIT"
+license = "Apache-2.0"
 requires-python = ">=3.10"
 authors = [
-    { name = "Datalync", email = "dev@datalync.com" }
+    { name = "Vamshi Rapolu", email = "vamshi.rapolu@gmail.com" }
 ]
 keywords = [
     "crawler",
@@ -86,10 +86,10 @@ docs = [
 ragcrawl = "ragcrawl.cli.main:app"
 
 [project.urls]
-Homepage = "https://github.com/datalync/ragcrawl"
-Documentation = "https://datalync.github.io/ragcrawl"
-Repository = "https://github.com/datalync/ragcrawl"
-Issues = "https://github.com/datalync/ragcrawl/issues"
+Homepage = "https://github.com/vamshirapolu/ragcrawl"
+Documentation = "https://vamshirapolu.github.io/ragcrawl"
+Repository = "https://github.com/vamshirapolu/ragcrawl"
+Issues = "https://github.com/vamshirapolu/ragcrawl/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/ragcrawl"]
