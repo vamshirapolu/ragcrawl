@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c4dff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#651fff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Spider/crawler body -->
+  <circle cx="50" cy="50" r="20" fill="url(#grad1)"/>
+  <!-- Spider legs representing web crawling -->
+  <g stroke="url(#grad1)" stroke-width="3" stroke-linecap="round" fill="none">
+    <!-- Top legs -->
+    <path d="M35,40 Q20,25 15,15"/>
+    <path d="M65,40 Q80,25 85,15"/>
+    <!-- Upper middle legs -->
+    <path d="M32,50 Q15,45 5,40"/>
+    <path d="M68,50 Q85,45 95,40"/>
+    <!-- Lower middle legs -->
+    <path d="M32,55 Q15,60 5,65"/>
+    <path d="M68,55 Q85,60 95,65"/>
+    <!-- Bottom legs -->
+    <path d="M35,65 Q20,80 15,90"/>
+    <path d="M65,65 Q80,80 85,90"/>
+  </g>
+  <!-- Eyes representing AI/scanning -->
+  <circle cx="43" cy="47" r="5" fill="white"/>
+  <circle cx="57" cy="47" r="5" fill="white"/>
+  <circle cx="44" cy="48" r="2" fill="#333"/>
+  <circle cx="58" cy="48" r="2" fill="#333"/>
+  <!-- Document icon in center -->
+  <rect x="42" y="55" width="16" height="12" rx="1" fill="white" opacity="0.9"/>
+  <line x1="45" y1="59" x2="55" y2="59" stroke="#7c4dff" stroke-width="1.5"/>
+  <line x1="45" y1="62" x2="52" y2="62" stroke="#7c4dff" stroke-width="1.5"/>
+</svg>
