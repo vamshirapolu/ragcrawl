@@ -182,7 +182,7 @@ extra:
       link: https://pypi.org/project/ragcrawl/
   analytics:
     provider: google
-    property: G-XXXXXXXXXX
+    property: G-BZN0JWGF0L
   generator: false
 
 extra_css:
