@@ -209,3 +209,18 @@ class TestLinkFilter:
         result = link_filter.filter(url, check_seen=True)
         assert not result.allowed
         assert result.reason == FilterReason.ALREADY_SEEN
+
+    def test_filter_invalid_scheme_and_path_prefix(self) -> None:
+        """Reject disallowed schemes and paths outside allowed prefixes."""
+        link_filter = LinkFilter(allowed_domains=["example.com"])
+        result = link_filter.filter("ftp://example.com/file", check_seen=False)
+        assert not result.allowed
+        assert result.reason == FilterReason.INVALID_SCHEME
+
+        prefixed_filter = LinkFilter(
+            allowed_domains=["example.com"],
+            allowed_path_prefixes=["/docs"],
+        )
+        outside = prefixed_filter.filter("https://example.com/blog/post", check_seen=False)
+        assert not outside.allowed
+        assert outside.reason == FilterReason.PATH_NOT_ALLOWED

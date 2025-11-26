@@ -1,8 +1,16 @@
 """Tests for hashing utilities."""
 
+from datetime import datetime
+
 import pytest
 
 from ragcrawl.utils.hashing import compute_content_hash, compute_doc_id, compute_url_hash
+from ragcrawl.utils.hashing import (
+    generate_chunk_id,
+    generate_run_id,
+    generate_site_id,
+    generate_version_id,
+)
 
 
 class TestHashing:
@@ -125,3 +133,29 @@ class TestHashing:
 
         assert isinstance(hash_value, str)
         assert len(hash_value) == 16
+
+    def test_generate_ids_and_non_normalized_hash(self) -> None:
+        """Cover helper ID generators and hash normalization toggle."""
+        raw = "Text   with   gaps"
+        normalized_hash = compute_content_hash(raw)
+        non_normalized_hash = compute_content_hash(raw, normalize=False)
+        assert normalized_hash != non_normalized_hash
+
+        run_id = generate_run_id()
+        assert run_id.startswith("run_") and len(run_id) > 10
+
+        timestamp = datetime(2024, 1, 1, 12, 0, 0)
+        version_id = generate_version_id("abcdef1234567890", timestamp=timestamp)
+        assert version_id.startswith("v_abcdef123456_20240101120000")
+
+        # Default timestamp path
+        default_version = generate_version_id("abcdef1234567890")
+        assert default_version.startswith("v_abcdef123456")
+
+        chunk_id = generate_chunk_id("doc", 3)
+        assert chunk_id.endswith("0003")
+
+        site_id = generate_site_id(["https://b.com", "https://a.com"])
+        # Deterministic regardless of order
+        site_id2 = generate_site_id(["https://a.com", "https://b.com"])
+        assert site_id == site_id2 and site_id.startswith("site_")

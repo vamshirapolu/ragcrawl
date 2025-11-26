@@ -1,6 +1,6 @@
 """Tests for data models."""
 
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 
 import pytest
@@ -335,3 +335,82 @@ class TestChunk:
         )
 
         assert chunk.token_estimate == 4
+
+    def test_page_needs_recrawl_branches(self) -> None:
+        """Page.needs_recrawl handles force, tombstones, and staleness."""
+        now = datetime.now()
+        page = Page(
+            page_id="p1",
+            site_id="s1",
+            url="https://example.com",
+            first_seen=now,
+            last_seen=now,
+            depth=0,
+            is_tombstone=True,
+        )
+        assert page.needs_recrawl(force=True)
+        assert not page.needs_recrawl(force=False)
+
+        page.is_tombstone = False
+        page.last_crawled = None
+        assert page.needs_recrawl()
+
+        page.last_crawled = datetime.now() - timedelta(hours=2)
+        assert page.needs_recrawl(max_age_hours=1)
+        page.last_crawled = datetime.now()
+        assert page.needs_recrawl(max_age_hours=None)
+
+    def test_crawl_run_markers_and_duration(self) -> None:
+        """Marking crawl runs updates status, timestamps, and duration."""
+        run = CrawlRun(
+            run_id="run1",
+            site_id="site1",
+            created_at=datetime.now(timezone.utc),
+            stats=CrawlStats(),
+        )
+        run.mark_started()
+        assert run.status is RunStatus.RUNNING
+        assert run.started_at is not None
+
+        run.mark_completed(partial=True)
+        assert run.status is RunStatus.PARTIAL
+        assert run.duration_seconds is not None
+
+        run.mark_failed("boom")
+        assert run.status is RunStatus.FAILED
+        assert run.error_message == "boom"
+        assert run.completed_at is not None
+
+        run.mark_cancelled()
+        assert run.status is RunStatus.CANCELLED
+
+    def test_frontier_item_status_transitions(self) -> None:
+        """FrontierItem helpers move through life-cycle and capture errors."""
+        now = datetime.now(timezone.utc)
+        item = FrontierItem(
+            item_id="i1",
+            run_id="r1",
+            site_id="s1",
+            url="https://example.com",
+            normalized_url="https://example.com",
+            url_hash="hash",
+            depth=0,
+            discovered_at=now,
+            domain="example.com",
+        )
+        item.mark_in_progress()
+        assert item.status is FrontierStatus.IN_PROGRESS
+        assert item.started_at is not None
+
+        item.mark_failed("oops")
+        assert item.status is FrontierStatus.FAILED
+        assert item.retry_count == 1
+        assert item.last_error == "oops"
+
+        item.mark_skipped("robots")
+        assert item.status is FrontierStatus.SKIPPED
+        assert item.last_error == "robots"
+
+        item.mark_completed()
+        assert item.status is FrontierStatus.COMPLETED
+        assert item.completed_at is not None

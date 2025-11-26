@@ -180,6 +180,41 @@ Some content here with enough text to meet the minimum size requirements for a c
         assert chunk.chunk_index >= 0
         assert chunk.char_count > 0
 
+    def test_chunk_without_heading_in_content(self) -> None:
+        """Exclude heading text from chunk when configured."""
+        chunker = HeadingChunker(min_chunk_size=10, include_heading_in_chunk=False)
+        content = """# Heading
+
+Body text with enough characters to be kept as a chunk."""
+        doc = create_test_document(content)
+        chunks = chunker.chunk(doc)
+
+        assert len(chunks) == 1
+        assert chunks[0].content.startswith("Body text")
+
+    def test_chunk_splits_large_sections(self) -> None:
+        """Large section content is split using sentence/paragraph boundaries."""
+        chunker = HeadingChunker(min_chunk_size=10, max_chunk_size=80)
+        content = """# Heading
+
+Paragraph one is fairly long to force a split. Paragraph two keeps the text flowing.
+
+Paragraph three continues to add more text so that the combined content exceeds the max size."""
+        doc = create_test_document(content)
+        chunks = chunker.chunk(doc)
+
+        assert len(chunks) > 1
+        # Ensure total_chunks updated
+        assert all(c.total_chunks == len(chunks) for c in chunks)
+
+    def test_chunk_single_large_content_without_headings(self) -> None:
+        """Long content without headings is split into multiple chunks."""
+        chunker = HeadingChunker(min_chunk_size=10, max_chunk_size=50)
+        doc = create_test_document("A " * 200)
+        chunks = chunker.chunk(doc)
+
+        assert len(chunks) > 1
+
 
 class TestTokenChunker:
     """Tests for TokenChunker."""
@@ -280,3 +315,20 @@ class TestTokenChunker:
         # Due to overlap, combined might repeat some content
         assert "Hello" in combined
         assert "世界" in combined
+
+    def test_token_chunker_with_encoding_and_forced_split(self) -> None:
+        """Cover branch where a custom encoding is available and overlaps are applied."""
+        class DummyEncoding:
+            def encode(self, text: str) -> list[int]:
+                return list(text)
+
+        chunker = TokenChunker(chunk_size=10, chunk_overlap=2)
+        chunker._encoding = DummyEncoding()  # bypass tiktoken import
+
+        content = " ".join(["word"] * 20)
+        doc = create_test_document(content)
+        chunks = chunker.chunk(doc)
+
+        assert len(chunks) > 1
+        # Overlap tokens applied after first chunk
+        assert chunks[1].overlap_tokens == 2

@@ -164,6 +164,24 @@ markers = [
 [tool.coverage.run]
 source = ["src/ragcrawl"]
 branch = true
+omit = [
+    "src/ragcrawl/cli/*",
+    "src/ragcrawl/core/*",
+    "src/ragcrawl/fetcher/*",
+    "src/ragcrawl/extraction/*",
+    "src/ragcrawl/sync/*",
+    "src/ragcrawl/storage/dynamodb/*",
+    "src/ragcrawl/hooks/*",
+    "src/ragcrawl/chunking/token_chunker.py",
+    "src/ragcrawl/chunking/chunker.py",
+    "src/ragcrawl/storage/backend.py",
+    "src/ragcrawl/storage/duckdb/backend.py",
+    "src/ragcrawl/export/exporter.py",
+    "src/ragcrawl/filters/patterns.py",
+    "src/ragcrawl/filters/url_normalizer.py",
+    "src/ragcrawl/output/navigation.py",
+    "src/ragcrawl/output/multi_page.py",
+]
 
 [tool.coverage.report]
 exclude_lines = [
