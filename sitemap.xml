@@ -2,118 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/chunking/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/core/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/core/crawl-job/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/core/sync-job/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/export/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/filters/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/models/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/models/chunk/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/models/document/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/models/page/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/models/site/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/storage/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/storage/duckdb/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/api/storage/dynamodb/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/cli/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
+    </url>
+    <url>
+         <loc>https://vamshirapolu.github.io/ragcrawl/community/</loc>
+         <lastmod>2025-11-27</lastmod>
+    </url>
+    <url>
+         <loc>https://vamshirapolu.github.io/ragcrawl/community/changelog/</loc>
+         <lastmod>2025-11-27</lastmod>
+    </url>
+    <url>
+         <loc>https://vamshirapolu.github.io/ragcrawl/community/code-of-conduct/</loc>
+         <lastmod>2025-11-27</lastmod>
+    </url>
+    <url>
+         <loc>https://vamshirapolu.github.io/ragcrawl/community/contributing/</loc>
+         <lastmod>2025-11-27</lastmod>
+    </url>
+    <url>
+         <loc>https://vamshirapolu.github.io/ragcrawl/community/support/</loc>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/configuration/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/configuration/crawler/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
+    </url>
+    <url>
+         <loc>https://vamshirapolu.github.io/ragcrawl/configuration/markdown/</loc>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/configuration/output/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/configuration/storage/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/getting-started/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/getting-started/installation/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/getting-started/quickstart/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/user-guide/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/user-guide/chunking/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/user-guide/crawling/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/user-guide/exporting/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
          <loc>https://vamshirapolu.github.io/ragcrawl/user-guide/syncing/</loc>
-         <lastmod>2025-11-26</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
 </urlset>
