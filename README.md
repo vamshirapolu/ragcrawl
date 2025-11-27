@@ -93,6 +93,30 @@ Users can choose how Markdown is written to disk:
    - Stable output paths across syncs; configurable handling for deletions:
      - tombstone pages or redirect stubs
 
+### Markdown Extraction Controls
+- Switch content filters: none, pruning (default), or BM25 (requires `user_query`).
+- Defaults tuned for docs: pruning filter, threshold `0.55`, min words per block `15`, and global text threshold `15`.
+- Tune boilerplate removal: thresholds, min words, tag/selector exclusions, iframe/form stripping.
+- Link hygiene: drop external/social links or specific domains; optionally remove all links/images.
+- Output selection: prefer `fit_markdown`, fall back to `raw_markdown`, or emit citations when available.
+
+```python
+from ragcrawl.config import CrawlerConfig
+from ragcrawl.config.markdown_config import MarkdownConfig, ContentFilterType
+
+config = CrawlerConfig(
+    seeds=["https://docs.example.com"],
+    markdown=MarkdownConfig(
+        content_filter=ContentFilterType.PRUNING,
+        excluded_tags=["nav", "footer"],
+        ignore_images=True,
+        include_citations=True,
+    ),
+)
+```
+
+CLI: save the same fields in `markdown.config.toml` or JSON and pass `--markdown-config ./markdown.config.toml` to `ragcrawl crawl`.
+
 ---
 
 ## Storage Backends (Pluggable)
@@ -535,8 +559,24 @@ In particular, RAGcrawl uses **Crawl4AI**, which is licensed under **Apache 2.0*
 
 ⸻
 
-## Contributing / Development
-- Uses pyproject.toml for builds (wheel + sdist)
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
+- Setting up your development environment
+- Running tests and linting
+- Submitting pull requests
+- Code of conduct
+
+### Community
+
+- **[Code of Conduct](CODE_OF_CONDUCT.md)** - Our community standards
+- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute
+- **[Support](SUPPORT.md)** - Getting help and reporting issues
+- **[Changelog](CHANGELOG.md)** - Release history and updates
+
+### Development
+
+- Uses `pyproject.toml` for builds (wheel + sdist)
 - CI expectations:
     - lint + typecheck + unit tests
     - build verification

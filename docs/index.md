@@ -228,3 +228,39 @@ ragcrawl runs site_abc123
     Report issues and contribute
 
 </div>
+
+## Community
+
+We welcome contributions from the community! Here's how you can get involved:
+
+<div class="grid cards" markdown>
+
+-   :material-account-group:{ .lg .middle } **[Contributing](community/contributing.md)**
+
+    ---
+
+    Learn how to contribute code, documentation, and more
+
+-   :material-shield-check:{ .lg .middle } **[Code of Conduct](community/code-of-conduct.md)**
+
+    ---
+
+    Our community standards and expectations
+
+-   :material-lifebuoy:{ .lg .middle } **[Support](community/support.md)**
+
+    ---
+
+    Get help and report issues
+
+-   :material-history:{ .lg .middle } **[Changelog](community/changelog.md)**
+
+    ---
+
+    Release history and updates
+
+</div>
+
+## License
+
+ragcrawl is licensed under the **Apache License 2.0**. See the [LICENSE](https://github.com/vamshirapolu/ragcrawl/blob/main/LICENSE) file for details.

@@ -5,6 +5,7 @@ from typing import Any, Callable
 
 from pydantic import BaseModel, Field
 
+from ragcrawl.config.markdown_config import MarkdownConfig
 from ragcrawl.config.output_config import OutputConfig
 from ragcrawl.config.storage_config import StorageConfig
 
@@ -212,6 +213,12 @@ class CrawlerConfig(BaseModel):
     )
     quality_gates: QualityGateConfig = Field(
         default_factory=QualityGateConfig, description="Quality gate configuration"
+    )
+
+    # === Markdown extraction ===
+    markdown: MarkdownConfig = Field(
+        default_factory=MarkdownConfig,
+        description="Markdown generation and content filtering configuration",
     )
 
     # === Storage ===

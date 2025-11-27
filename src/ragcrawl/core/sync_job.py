@@ -77,7 +77,7 @@ class SyncJob:
         self._storage = create_storage_backend(self.config.storage)
         self._storage.initialize()
 
-        self._fetcher = Crawl4AIFetcher()
+        self._fetcher = Crawl4AIFetcher(markdown_config=self.config.markdown)
         self._extractor = ContentExtractor()
         self._sitemap_parser = SitemapParser()
         self._change_detector = ChangeDetector(

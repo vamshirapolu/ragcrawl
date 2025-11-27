@@ -5,6 +5,7 @@ from typing import Any, Callable
 
 from pydantic import BaseModel, Field
 
+from ragcrawl.config.markdown_config import MarkdownConfig
 from ragcrawl.config.output_config import OutputConfig
 from ragcrawl.config.storage_config import StorageConfig
 
@@ -98,6 +99,12 @@ class SyncConfig(BaseModel):
     # === Output ===
     output: OutputConfig | None = Field(
         default=None, description="Output configuration (None = no file output)"
+    )
+
+    # === Markdown extraction ===
+    markdown: MarkdownConfig = Field(
+        default_factory=MarkdownConfig,
+        description="Markdown generation and content filtering configuration",
     )
 
     # === Hooks ===

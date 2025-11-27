@@ -1,6 +1,7 @@
 """Configuration classes for ragcrawl."""
 
 from ragcrawl.config.crawler_config import CrawlerConfig, FetchMode, RobotsMode
+from ragcrawl.config.markdown_config import ContentFilterType, MarkdownConfig
 from ragcrawl.config.output_config import (
     DeletionHandling,
     OutputConfig,
@@ -34,6 +35,8 @@ __all__ = [
     "OutputConfig",
     "OutputMode",
     "DeletionHandling",
+    "MarkdownConfig",
+    "ContentFilterType",
     "UserConfig",
     "UserConfigManager",
     "get_config_manager",

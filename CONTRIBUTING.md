@@ -17,54 +17,65 @@ By participating in this project, you agree to follow the rules in `CODE_OF_COND
 - `uv` recommended (but `pip` works too)
 
 ### Setup with uv (recommended)
+
 ```bash
 git clone https://github.com/vamshirapolu/ragcrawl.git
 cd ragcrawl
 uv venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 uv pip install -e ".[dev]"
+```
 
-Setup with pip
+### Setup with pip
 
+```bash
 python -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -U pip
 pip install -e ".[dev]"
+```
 
-Running the Project
+## Running the Project
 
+```bash
 ragcrawl --help
+```
 
-Running Tests
+## Running Tests
 
+```bash
 pytest -q
+```
 
-Linting / Formatting
+## Linting / Formatting
 
-If the repo uses Ruff:
+We use **Ruff** for linting and formatting:
 
+```bash
 ruff check .
 ruff format .
+```
 
-If the repo uses Black:
+## Docs (MkDocs)
 
-black .
-
-Docs (MkDocs)
-
+```bash
 mkdocs serve
+```
 
-Pull Request Guidelines
-	•	Keep PRs focused (one feature/fix per PR when possible).
-	•	Add/adjust tests when behavior changes.
-	•	Update docs if you add/modify public-facing behavior.
-	•	Keep backwards compatibility for public APIs, or clearly call out breaking changes.
+## Pull Request Guidelines
 
-Commit Message Guidance (suggested)
-	•	feat: ... new feature
-	•	fix: ... bug fix
-	•	docs: ... docs-only
-	•	chore: ... build/tooling
+- Keep PRs focused (one feature/fix per PR when possible)
+- Add/adjust tests when behavior changes
+- Update docs if you add/modify public-facing behavior
+- Keep backwards compatibility for public APIs, or clearly call out breaking changes
 
-Security
+## Commit Message Guidance (suggested)
 
-Please do not open public issues for security vulnerabilities. See SUPPORT.md for the preferred reporting path.
+- `feat: ...` - New feature
+- `fix: ...` - Bug fix
+- `docs: ...` - Documentation only
+- `chore: ...` - Build/tooling changes
+
+## Security
+
+Please do not open public issues for security vulnerabilities. See `SUPPORT.md` for the preferred reporting path.

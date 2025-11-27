@@ -129,6 +129,7 @@ class CrawlJob:
             retry_config=self.config.retry,
             follow_redirects=self.config.follow_redirects,
             max_redirects=self.config.max_redirects,
+            markdown_config=self.config.markdown,
         )
 
         # Robots

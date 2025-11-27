@@ -72,6 +72,12 @@ config = CrawlerConfig(
 | `circuit_breaker_threshold` | `int` | `10` | Failures before circuit break |
 | `circuit_breaker_reset` | `float` | `300.0` | Seconds before circuit reset |
 
+### Markdown Extraction
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `markdown` | `MarkdownConfig` | Tuned defaults | Controls Crawl4AI content filtering and Markdown generator options. See [Markdown Extraction](markdown.md). |
+
 ## FetchMode Enum
 
 ```python

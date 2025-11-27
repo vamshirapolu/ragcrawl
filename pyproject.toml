@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ragcrawl"
-version = "0.0.1"
+version = "0.0.2"
 description = "Recursive website crawler producing LLM-ready knowledge base artifacts with Crawl4AI"
 readme = "README.md"
 license = "Apache-2.0"
@@ -71,7 +71,7 @@ dev = [
     "respx>=0.21.0",
     "ruff>=0.4.0",
     "mypy>=1.10.0",
-    "pre-commit>=3.7.0",
+    "pre-commit>=3.7.0"
 ]
 docs = [
     "mkdocs>=1.6.0",

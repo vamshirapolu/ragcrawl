@@ -147,6 +147,7 @@ nav:
     - Crawler Options: configuration/crawler.md
     - Storage Backends: configuration/storage.md
     - Output Settings: configuration/output.md
+    - Markdown Extraction: configuration/markdown.md
   - CLI Reference:
     - cli/index.md
   - API Reference:
@@ -171,6 +172,12 @@ nav:
       - api/export/index.md
     - Filters:
       - api/filters/index.md
+  - Community:
+    - community/index.md
+    - Contributing: community/contributing.md
+    - Code of Conduct: community/code-of-conduct.md
+    - Support: community/support.md
+    - Changelog: community/changelog.md
 
 extra:
   version:
@@ -188,4 +195,4 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
-copyright: Copyright &copy; 2024 ragcrawl
+copyright: Copyright &copy; 2025 Vamshi Rapolu and contributors

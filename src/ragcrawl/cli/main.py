@@ -12,6 +12,31 @@ import click
 from ragcrawl import __version__
 
 
+def _load_markdown_config(path: Path):
+    """Load MarkdownConfig from a TOML or JSON file."""
+    from ragcrawl.config.markdown_config import MarkdownConfig
+
+    suffix = path.suffix.lower()
+    if suffix in {".toml", ".tml"}:
+        try:
+            import tomllib
+        except ModuleNotFoundError:
+            raise click.ClickException(
+                "TOML parsing requires Python 3.11+. Use a JSON file for "
+                "MarkdownConfig overrides or upgrade your Python."
+            )
+
+        data = tomllib.loads(path.read_text())
+    elif suffix == ".json":
+        data = json.loads(path.read_text())
+    else:
+        raise click.ClickException(
+            f"Unsupported markdown config format '{suffix}'. Use TOML (.toml) or JSON (.json)."
+        )
+
+    return MarkdownConfig(**data)
+
+
 def get_storage_path() -> Path:
     """Get the default storage path from user config."""
     from ragcrawl.config.user_config import get_config_manager
@@ -356,6 +381,11 @@ def list_runs(
     help="Export documents to JSONL file.",
 )
 @click.option(
+    "--markdown-config",
+    type=click.Path(exists=True, dir_okay=False),
+    help="Path to MarkdownConfig overrides (TOML or JSON).",
+)
+@click.option(
     "--verbose",
     "-v",
     is_flag=True,
@@ -374,6 +404,7 @@ def crawl(
     js: bool,
     export_json: Optional[str],
     export_jsonl: Optional[str],
+    markdown_config: Optional[str],
     verbose: bool,
 ) -> None:
     """
@@ -382,6 +413,7 @@ def crawl(
     SEEDS: One or more URLs to start crawling from.
     """
     from ragcrawl.config.crawler_config import CrawlerConfig, FetchMode, RobotsMode
+    from ragcrawl.config.markdown_config import MarkdownConfig
     from ragcrawl.config.output_config import OutputConfig, OutputMode
     from ragcrawl.config.storage_config import DuckDBConfig, StorageConfig
     from ragcrawl.config.user_config import get_user_config
@@ -407,6 +439,9 @@ def crawl(
     # Ensure storage directory exists
     storage_path.parent.mkdir(parents=True, exist_ok=True)
 
+    # Markdown config (CLI override file or defaults)
+    mc = _load_markdown_config(Path(markdown_config)) if markdown_config else MarkdownConfig()
+
     # Build config
     config = CrawlerConfig(
         seeds=list(seeds),
@@ -421,6 +456,7 @@ def crawl(
             mode=OutputMode.SINGLE if output_mode == "single" else OutputMode.MULTI,
             root_dir=output,
         ),
+        markdown=mc,
     )
 
     click.echo(f"Starting crawl of {len(seeds)} seed URL(s)...")

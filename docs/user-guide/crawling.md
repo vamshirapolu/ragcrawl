@@ -53,6 +53,7 @@ ragcrawl crawl https://docs.example.com \
 | `--js/--no-js` | | Enable JavaScript rendering |
 | `--export-json` | | Export documents to JSON file |
 | `--export-jsonl` | | Export documents to JSONL file |
+| `--markdown-config` | | Path to MarkdownConfig overrides (TOML/JSON) |
 | `--verbose` | `-v` | Verbose output |
 
 ### Multiple Seeds

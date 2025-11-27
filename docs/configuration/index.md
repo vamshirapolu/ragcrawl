@@ -4,13 +4,14 @@ ragcrawl is highly configurable to handle various crawling scenarios. This secti
 
 ## Configuration Overview
 
-ragcrawl uses three main configuration classes:
+ragcrawl uses four main configuration classes:
 
 | Config Class | Purpose | Documentation |
 |--------------|---------|---------------|
 | `CrawlerConfig` | Controls crawl behavior | [Crawler Options](crawler.md) |
 | `StorageConfig` | Database backend settings | [Storage Backends](storage.md) |
 | `OutputConfig` | Output format and files | [Output Settings](output.md) |
+| `MarkdownConfig` | Markdown extraction and filtering | [Markdown Extraction](markdown.md) |
 
 ## Quick Configuration Example
 
@@ -130,6 +131,12 @@ Some settings can be configured via environment variables:
     ---
 
     Configure output formats, file structure, and export options.
+
+-   :material-format-text:{ .lg .middle } **[Markdown Extraction](markdown.md)**
+
+    ---
+
+    Tune Crawl4AI filters and Markdown generator options for cleaner output.
 
 </div>
 
